@@ -1,0 +1,72 @@
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+[class*="group"]{
+    display: none;
+    width: calc(33.3% - 1.875rem);
+    min-height: 200px;
+    box-sizing: border-box;
+    border:1px solid grey;
+    background-color: red;
+    margin-bottom: 30px;
+
+}
+
+.group1{
+    background-color: aqua;
+}
+.group2{
+    background-color: blue;
+}
+.group3{
+    background-color: brown;
+}
+.group4{
+    background-color: yellow;
+}
+.group5{
+    background-color: green;
+}
+.group6{
+    background-color: black;
+}
+
+
+
+.row{
+    display: flex;
+    flex-flow: row wrap;
+
+    justify-content: space-between;
+}
+.active >*{
+    display: block;
+}
+
+[class*="btn-"]{
+    margin-bottom: 20px;
+}
+[class*="btn-"]:focus ~ .active > *{
+    display: none;
+}
+
+.btn-1:focus ~div .group1{
+    display: block;
+}
+
+.btn-2:focus ~div .group2{
+    display: block;
+}
+.btn-3:focus ~ .row > .group3{
+    display: block;
+}
+.btn-4:focus ~ .row > .group4{
+    display: block;
+}
+.btn-5:focus ~ .row > .group5{
+    display: block;
+}
+.btn-6:focus ~ .row > .group6{
+    display: block;
+}
