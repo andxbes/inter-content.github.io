@@ -3,14 +3,12 @@
     margin: 0 auto;
 }
 [class*="group"]{
-    display: none;
     width: calc(33.3% - 1.875rem);
     min-height: 200px;
     box-sizing: border-box;
     border:1px solid grey;
     background-color: red;
     margin-bottom: 30px;
-
 }
 
 .group1{
@@ -40,14 +38,14 @@
 
     justify-content: space-between;
 }
-.active >*{
-    display: block;
+[class*="btn-"]:focus ~ div >[class*="group"]{
+    display: none;
 }
 
 [class*="btn-"]{
     margin-bottom: 20px;
 }
-[class*="btn-"]:focus ~ .active > *{
+[class*="btn-"]:focus ~ div > *{
     display: none;
 }
 
@@ -68,5 +66,8 @@
     display: block;
 }
 .btn-6:focus ~ .row > .group6{
+    display: block;
+}
+.btn-all:focus ~ .row > [class*="group"]{
     display: block;
 }
